@@ -36,11 +36,16 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
     val lifecycle_version = "2.8.4"
 
+    //Loading ViewModel
+    implementation("androidx.fragment:fragment-ktx:1.8.2")
     // LiveData
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
     // ViewModel
